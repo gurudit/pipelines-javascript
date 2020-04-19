@@ -11,11 +11,11 @@ steps:
 - script: |
     npm install
     npm test
-    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
-    docker login -u $(dockerId) -p $pswd
-    docker push $(dockerId)/$(imageName)
+    docker build -f Dockerfile -t gurudocker23/$(imageName) .
+    docker login -u gurudocker23 -p Waheguru@1
+    docker push gurudocker23/$(imageName)
   env:
-    pswd: $(dockerPassword)
+    pswd: Waheguru@1
 
 - task: PublishTestResults@2
   condition: succeededOrFailed()
