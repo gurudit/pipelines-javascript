@@ -2,7 +2,7 @@
 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker?view=vsts
 pool:
-  vmImage: 'Ubuntu 16.04'
+  vmImage: 'windows latest'
   
 variables:
   imageName: 'nodejssample:$(Build.BuildId)'
@@ -23,12 +23,6 @@ steps:
   inputs:
     testResultsFiles: '**/TEST-RESULTS.xml'
     testRunTitle: 'Test results for JavaScript'
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo "in coverage"
-      cd coverage
 
 - task: PublishCodeCoverageResults@1
   inputs: 
