@@ -26,6 +26,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
+      echo "in coverage"
       cd coverage
 
 - task: PublishCodeCoverageResults@1
