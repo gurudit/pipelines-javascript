@@ -36,6 +36,7 @@ steps:
     To: 'guruditsinghbarar1994@gmail.com'
     From: 'gurditsinghbrar1994@gmail.com'
     Subject: 'corbertura results'
+    Body: 'reprt corbertura /home/vsts/work/_temp/cchtml/index.html'
     BodyAsHtml: true
     AddAttachment: true
     Attachment: '/home/vsts/work/_temp/cchtml/index.html'
