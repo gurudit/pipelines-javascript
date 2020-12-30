@@ -23,6 +23,10 @@ steps:
     testResultsFiles: '**/TEST-RESULTS.xml'
     testRunTitle: 'Test results for JavaScript'
 
+- task: CmdLine@2
+  inputs:
+    script: 'ls -l'
+
 - task: PublishCodeCoverageResults@1
   inputs: 
     codeCoverageTool: Cobertura
