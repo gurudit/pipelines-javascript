@@ -1,4 +1,5 @@
 # Build Docker image for this app using Azure Pipelines
+
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker?view=vsts
 pool:
   vmImage: 'Ubuntu 16.04'
@@ -35,3 +36,12 @@ steps:
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
     reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
     
+
+- task: SendEmail@1
+  inputs:
+    To: 'guruditsinghbarar1994@gmail.com'
+    From: 'gurditsinghbrar1994@gmail.com'
+    Subject: 'corbertura results'
+    BodyAsHtml: true
+    AddAttachment: true
+    Attachment: '/home/vsts/work/_temp/cchtml/index.html'
