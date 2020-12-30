@@ -25,7 +25,9 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'ls -l'
+    script: |
+      ls -l
+      cd coverage
 
 - task: PublishCodeCoverageResults@1
   inputs: 
