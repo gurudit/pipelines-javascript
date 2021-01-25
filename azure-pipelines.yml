@@ -28,6 +28,11 @@ steps:
   inputs:
     reportDir: 'coverage/index.html'
 
+- task: publishhtmlreport@1
+  inputs:
+    htmlType: 'genericHTML'
+    htmlPath: 'coverage/index.html'
+
 - task: CmdLine@2
   inputs:
     script: |
