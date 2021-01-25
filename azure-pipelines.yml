@@ -24,9 +24,6 @@ steps:
     testResultsFiles: '**/TEST-RESULTS.xml'
     testRunTitle: 'Test results for JavaScript'
 
-- task: PublishHtmlReport@1
-  inputs:
-    reportDir: 'coverage/index.html'
 
 - task: publishhtmlreport@1
   inputs:
