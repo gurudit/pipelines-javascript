@@ -2,7 +2,7 @@
 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker?view=vsts
 pool:
-  vmImage: 'windows latest'
+  vmImage: 'ubuntu-latest'
   
 variables:
   imageName: 'nodejssample:$(Build.BuildId)'
@@ -10,7 +10,7 @@ variables:
 
 steps:
 - script: |
-    npm install
+    npm install 
     npm test
     docker build -f Dockerfile -t gurudocker23/$(imageName) .
     docker login -u gurudocker23 -p Waheguru@1
